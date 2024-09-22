@@ -6,6 +6,8 @@ export default function Home() {
   const [getResponse, setGetResponse] = useState('');
 
   const handleGetRequest = async () => {
+    const apiUrl = 'https://step3-1-demo-b6dhetd9g5accxf6.canadacentral-01.azurewebsites.net/api/hello';
+    console.log("リクエストURL:", apiUrl);
     const res = await fetch('https://step3-1-demo-b6dhetd9g5accxf6.canadacentral-01.azurewebsites.net/api/hello', {
       method: 'GET',
     });
