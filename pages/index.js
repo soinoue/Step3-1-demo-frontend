@@ -1,13 +1,12 @@
 import { useState } from 'react';
 
+
 export default function Home() {
 
   //GETリクエストを送信
   const [getResponse, setGetResponse] = useState('');
 
   const handleGetRequest = async () => {
-    const apiUrl = 'https://step3-1-demo-b6dhetd9g5accxf6.canadacentral-01.azurewebsites.net/api/hello';
-    console.log("リクエストURL:", apiUrl);
     const res = await fetch('https://step3-1-demo-b6dhetd9g5accxf6.canadacentral-01.azurewebsites.net/api/hello', {
       method: 'GET',
     });
@@ -99,7 +98,7 @@ export default function Home() {
   return (
     <div>
 
-      <h1>Next.jsとFlaskの連携アプリ</h1>
+      <h1>Next.jsとFlaskの連携アプリ（クラウド　⇄ クラウド）</h1>
 
       <h2>GETリクエストを送信</h2>
       <button onClick={handleGetRequest}>GETリクエストを送信</button>
